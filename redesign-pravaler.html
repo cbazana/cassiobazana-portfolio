@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesign Pravaler — Cassio Bazana · Product Designer</title>
+  <meta name="description" content="Redesign do site comercial do Pravaler, fintech de financiamento estudantil: proposta clara, caminhos por público e identidade de marca recuperada. Meu trabalho de Product Designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo-avatar.png">
+
+  <!-- Placeholders de imagens ainda não entregues + componente antes/depois — exclusivos deste case -->
+  <style>
+    .shot-ph, .hero-ph, .ds-ph {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      width: 100%; border-radius: 16px;
+      border: 1px dashed rgba(244, 244, 242, 0.18);
+      background:
+        repeating-linear-gradient(-45deg, rgba(244,244,242,0.02) 0 12px, rgba(244,244,242,0.04) 12px 24px);
+      color: var(--white-40); font-size: 14px; letter-spacing: -0.01em;
+    }
+    .shot-ph { aspect-ratio: 1800 / 1170; }
+    .hero-ph { aspect-ratio: 2200 / 1160; border-radius: 18px; }
+    .ds-ph { aspect-ratio: 1600 / 1200; }
+    .shot-ph span, .hero-ph span, .ds-ph span { padding: 12px 18px; }
+
+    /* Antes e depois */
+    .ba-list { display: flex; flex-direction: column; gap: 56px; }
+    .ba-caption { margin-bottom: 18px; display: flex; align-items: baseline; gap: 14px; }
+    .ba-index {
+      font-family: var(--font-display); font-weight: 600; font-size: 15px;
+      color: var(--accent); letter-spacing: 0.02em;
+    }
+    .ba-name {
+      font-family: var(--font-display); font-weight: 400; font-size: 22px; color: var(--ink);
+    }
+    .ba-slider {
+      position: relative; width: 100%; aspect-ratio: 1800 / 1170;
+      border-radius: 16px; overflow: hidden; isolation: isolate;
+      border: 1px solid var(--border); user-select: none; touch-action: none;
+      --pos: 50%;
+    }
+    .ba-layer { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .ba-layer img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); z-index: 2; }
+    .ba-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white-40); font-size: 13px; }
+    .ba-ph-before { background: repeating-linear-gradient(-45deg, rgba(244,244,242,0.02) 0 12px, rgba(244,244,242,0.06) 12px 24px); }
+    .ba-ph-after { background: repeating-linear-gradient(-45deg, rgba(0,200,150,0.05) 0 12px, rgba(0,200,150,0.11) 12px 24px); }
+    .ba-divider { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; background: var(--accent); transform: translateX(-1px); z-index: 3; pointer-events: none; }
+    .ba-handle {
+      position: absolute; top: 50%; left: var(--pos); z-index: 4;
+      width: 44px; height: 44px; border-radius: 50%; transform: translate(-50%, -50%);
+      background: var(--accent); color: var(--btn-ink);
+      display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35); pointer-events: none;
+    }
+    .ba-range {
+      position: absolute; inset: 0; z-index: 5; width: 100%; height: 100%;
+      margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; background: transparent;
+    }
+    .ba-range::-webkit-slider-thumb { -webkit-appearance: none; width: 44px; height: 100%; cursor: ew-resize; }
+    .ba-range::-moz-range-thumb { width: 44px; height: 100%; border: 0; background: transparent; cursor: ew-resize; }
+    .ba-tag {
+      position: absolute; top: 16px; z-index: 3; pointer-events: none;
+      padding: 6px 12px; border-radius: 999px; font-size: 12px; letter-spacing: 0.02em;
+      background: rgba(18,18,21,0.72); color: var(--ink-85); backdrop-filter: blur(6px);
+    }
+    .ba-tag-before { left: 16px; }
+    .ba-tag-after { right: 16px; }
+  </style>
+</head>
+<body class="page-project">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-avatar" src="assets/logo-avatar.png" alt="Cassio Bazana" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Cassio Bazana</span>
+          <span class="brand-role">Product Designer</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="index.html#cases">Cases</a>
+        <a class="nav-link" href="index.html#trabalhos">Trabalhos</a>
+        <a class="nav-link" href="index.html#sobre">Sobre</a>
+        <a class="nav-link" href="index.html#depoimentos">Depoimentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-wrap">
+          <button class="lang-switch" id="lang-switch" type="button" aria-label="Idioma" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-icon icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:4.17%;"><img src="assets/icon-earth.svg" alt=""></i>
+            </span>
+            <span class="lang-label" id="lang-label">PT</span>
+            <span class="lang-chevron icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:33.33% 18.75% 33.33% 22.92%;"><img src="assets/icon-chevron.svg" alt=""></i>
+            </span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="Idioma">
+            <button class="lang-option" type="button" role="option" data-lang="pt">PT</button>
+            <button class="lang-option" type="button" role="option" data-lang="en">ENG</button>
+          </div>
+        </div>
+        <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Vamos Trabalhar Juntos</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO DO PROJETO ============ -->
+  <section class="proj-hero">
+    <div class="container">
+      <a class="proj-back reveal" href="index.html">
+        <span class="proj-back-arrow" aria-hidden="true">←</span> Voltar
+      </a>
+
+      <div class="proj-hero-text">
+        <span class="badge reveal" data-reveal-delay="60">REDESIGN DE SITE · FINTECH DE FINANCIAMENTO ESTUDANTIL</span>
+        <h1 class="proj-title reveal" data-reveal-delay="120">Redesign Pravaler</h1>
+        <p class="proj-lead reveal" data-reveal-delay="180">Redesign do site comercial do Pravaler para deixar claro, logo de cara, o que é o financiamento estudantil, para quem ele serve e como entrar no portal — recuperando a identidade da marca que estava diluída.</p>
+
+        <ul class="proj-meta reveal" data-reveal-delay="240">
+          <li class="meta-item">
+            <span class="meta-label">Papel</span>
+            <span class="meta-value">Designer de Produto Especialista</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Time</span>
+            <span class="meta-value">Chapter de design</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Foco</span>
+            <span class="meta-value">Estratégia de UX e redesign</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="hero-shot reveal" data-reveal-delay="120">
+      <img src="assets/redesign-pravaler/hero.jpg" width="2200" height="1042" alt="Hero do novo site Pravaler, com uma estudante e a marca em destaque">
+    </figure>
+  </section>
+
+  <!-- ============ SOBRE O PROJETO ============ -->
+  <section class="section proj-section" id="sobre-projeto">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">O PROJETO</span>
+          <h2 class="proj-about-title">Um site que finalmente explica o que o Pravaler faz.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">O Pravaler é uma fintech de financiamento estudantil, mas o site comercial não deixava isso claro. Havia excesso de cores e a identidade da marca se perdia. Nas entrevistas, os usuários diziam não entender ao certo o que o Pravaler fazia: públicos diferentes chegavam ao site sem saber como entrar no portal, como funcionava o financiamento ou o papel do garantidor. O redesign foi a chance de rever tudo isso.</p>
+          <p class="proj-about-text">Entrei como Designer de Produto Especialista, dentro da squad de descoberta. A frente começou reunindo o chapter de design inteiro — dez designers — e terminou comigo tocando sozinho, alinhando o desenvolvimento com a squad e trabalhando lado a lado com marketing (copy e SEO) e negócios. Meu papel ia da investigação do problema à interface final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN SYSTEM ============ -->
+  <section class="section proj-section" id="design-system">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">DESIGN SYSTEM</span>
+          <h2 class="proj-about-title">A identidade da marca, aplicada com consistência.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">Em paralelo a esse projeto, eu tocava o design system do Pravaler. Apliquei aqui os componentes que a gente vinha construindo — a nova paleta da marca, a tipografia, os raios de borda, os espaçamentos e os botões — para dar consistência ao site novo e recuperar a identidade visual que antes se perdia no excesso de cores.</p>
+        </div>
+      </div>
+
+      <div class="ds-figs">
+        <figure class="ds-hero reveal">
+          <img src="assets/redesign-pravaler/cores.jpg" width="1600" height="1385" loading="lazy" alt="Paleta de cores do novo Pravaler: branco, preto, laranja #FA5300 e a escala de cinzas">
+          <figcaption class="ds-caption">Paleta e tokens de cor</figcaption>
+        </figure>
+
+        <figure class="ds-hero reveal">
+          <img src="assets/redesign-pravaler/tipografia.jpg" width="1600" height="1062" loading="lazy" alt="Style guide de tipografia do novo Pravaler, com os estilos de título e corpo de texto">
+          <figcaption class="ds-caption">Escala tipográfica</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ O QUE EU FAZIA ============ -->
+  <section class="section proj-section" id="o-que-eu-fazia">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">O QUE EU FAZIA</span>
+        <h2 class="section-title">Da escuta do usuário à interface final.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Discovery &amp; Entrevistas</h3>
+          <p class="task-desc">Investiguei com usuários o que não estava claro no site e por que os públicos se perdiam.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">Arquitetura &amp; Fluxos</h3>
+          <p class="task-desc">Reorganizei as seções por público e tornei óbvio o caminho para entender o produto e entrar no portal.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Alinhamento com a squad</h3>
+          <p class="task-desc">Conduzi a frente junto à squad de descoberta, marketing (copy/SEO) e negócios.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">04</span>
+          <h3 class="task-title">UI &amp; Redesign</h3>
+          <p class="task-desc">Desenhei o site novo recuperando a identidade da marca e reduzindo o ruído visual.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">05</span>
+          <h3 class="task-title">Design System</h3>
+          <p class="task-desc">Apliquei e evoluí os componentes da marca — cores, tipografia, botões, espaçamentos.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="180">
+          <span class="task-num">06</span>
+          <h3 class="task-title">Testes de usabilidade</h3>
+          <p class="task-desc">Validei a nova proposta com usuários para confirmar clareza e percepção.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TELAS / ANTES E DEPOIS ============ -->
+  <section class="section proj-section" id="antes-depois">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">ANTES E DEPOIS</span>
+        <h2 class="section-title">O que mudou, lado a lado.</h2>
+      </div>
+
+      <div class="ba-list">
+        <article class="ba-item reveal">
+          <div class="ba-caption">
+            <span class="ba-index">01</span>
+            <span class="ba-name">Home</span>
+          </div>
+          <div class="ba-slider">
+            <div class="ba-layer ba-after"><img src="assets/redesign-pravaler/ba-home-depois.jpg" width="1800" height="949" alt="Home do Pravaler depois do redesign"></div>
+            <div class="ba-layer ba-before"><img src="assets/redesign-pravaler/ba-home-antes.jpg" width="1800" height="931" alt="Home do Pravaler antes do redesign"></div>
+            <span class="ba-tag ba-tag-before">Antes</span>
+            <span class="ba-tag ba-tag-after">Depois</span>
+            <span class="ba-divider" aria-hidden="true"></span>
+            <span class="ba-handle" aria-hidden="true">⇄</span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar a Home antes e depois do redesign">
+          </div>
+        </article>
+
+        <article class="ba-item reveal">
+          <div class="ba-caption">
+            <span class="ba-index">02</span>
+            <span class="ba-name">Como funciona o financiamento</span>
+          </div>
+          <div class="ba-slider">
+            <div class="ba-layer ba-after"><img src="assets/redesign-pravaler/ba-comofunciona-depois.jpg" width="1800" height="1248" alt="Página Como funciona o financiamento depois do redesign"></div>
+            <div class="ba-layer ba-before"><img src="assets/redesign-pravaler/ba-comofunciona-antes.jpg" width="1800" height="1016" alt="Página Como funciona o financiamento antes do redesign"></div>
+            <span class="ba-tag ba-tag-before">Antes</span>
+            <span class="ba-tag ba-tag-after">Depois</span>
+            <span class="ba-divider" aria-hidden="true"></span>
+            <span class="ba-handle" aria-hidden="true">⇄</span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar a página Como funciona antes e depois do redesign">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GANHOS ALCANÇADOS ============ -->
+  <section class="section proj-section" id="ganhos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">GANHOS ALCANÇADOS</span>
+        <h2 class="section-title">Mais clareza, do público certo à proposta certa.</h2>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Proposta clara</h3>
+          <p class="result-desc">O site passou a explicar, de forma direta, o que é o financiamento estudantil e o que o Pravaler faz.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="80">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Caminho por público</h3>
+          <p class="result-desc">Cada tipo de pessoa passou a entender para onde ir e como entrar no portal.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="160">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Validado em teste</h3>
+          <p class="result-desc">Novos testes de usabilidade mostraram aumento na percepção do serviço e das seções certas para cada público.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ O SITE COMPLETO ============ -->
+  <section class="section proj-section" id="site-completo">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">O SITE COMPLETO</span>
+        <h2 class="section-title">A home nova, de ponta a ponta.</h2>
+      </div>
+      <figure class="shot reveal">
+        <img src="assets/redesign-pravaler/site-completo.jpg" width="1400" height="5822" loading="lazy" alt="A home completa do novo site Pravaler, do topo ao rodapé">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer proj-footer">
+    <div class="footer-shell">
+      <div class="footer-top footer-row">
+        <div class="footer-brand">
+          <p class="footer-name">Cassio Bazana</p>
+          <p class="footer-role">Product Designer</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-cta-link" href="index.html">Ver todos os trabalhos</a>
+          <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Entre em contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom footer-row">
+        <p>© 2026&nbsp; Cassio Bazana</p>
+        <p>Powered by Cassio Bazana</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem">
+      <span aria-hidden="true">×</span>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Slider antes/depois — arrasta o range e revela a imagem "antes" sobre a "depois"
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+      var range = slider.querySelector('.ba-range');
+      if (!range) return;
+      function update() { slider.style.setProperty('--pos', range.value + '%'); }
+      range.addEventListener('input', update);
+      update();
+    });
+  </script>
+</body>
+</html>

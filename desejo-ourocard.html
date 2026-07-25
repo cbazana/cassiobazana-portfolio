@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desejo Ourocard — Cassio Bazana · Product Designer</title>
+  <meta name="description" content="Desejo Ourocard: campanha de cashback da Dotz em parceria com o Banco do Brasil. Meu trabalho como Product Designer Sênior no hotsite de pontuação, metas e resgates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo-avatar.png">
+
+  <!-- Estilos da seção final (home desktop + mobile) — exclusivo deste case -->
+  <style>
+    /* As imagens já vêm com mockup/sombra, então nada de moldura extra */
+    .home-stack { display: flex; flex-direction: column; gap: 56px; margin-top: 56px; }
+    .home-item { display: flex; flex-direction: column; gap: 16px; }
+    .home-item img { display: block; width: 100%; height: auto; }
+    .home-cap { font-size: 14px; color: var(--white-40); letter-spacing: -0.01em; }
+    /* Design System: espaço entre o cabeçalho (título+texto) e as imagens empilhadas */
+    #design-system .ds-hero { margin-top: 48px; }
+  </style>
+</head>
+<body class="page-project">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-avatar" src="assets/logo-avatar.png" alt="Cassio Bazana" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Cassio Bazana</span>
+          <span class="brand-role">Product Designer</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="index.html#cases">Cases</a>
+        <a class="nav-link" href="index.html#trabalhos">Trabalhos</a>
+        <a class="nav-link" href="index.html#sobre">Sobre</a>
+        <a class="nav-link" href="index.html#depoimentos">Depoimentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-wrap">
+          <button class="lang-switch" id="lang-switch" type="button" aria-label="Idioma" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-icon icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:4.17%;"><img src="assets/icon-earth.svg" alt=""></i>
+            </span>
+            <span class="lang-label" id="lang-label">PT</span>
+            <span class="lang-chevron icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:33.33% 18.75% 33.33% 22.92%;"><img src="assets/icon-chevron.svg" alt=""></i>
+            </span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="Idioma">
+            <button class="lang-option" type="button" role="option" data-lang="pt">PT</button>
+            <button class="lang-option" type="button" role="option" data-lang="en">ENG</button>
+          </div>
+        </div>
+        <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Vamos Trabalhar Juntos</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO DO PROJETO ============ -->
+  <section class="proj-hero">
+    <div class="container">
+      <a class="proj-back reveal" href="index.html">
+        <span class="proj-back-arrow" aria-hidden="true">←</span> Voltar
+      </a>
+
+      <div class="proj-hero-text">
+        <span class="badge reveal" data-reveal-delay="60">CAMPANHA DE CASHBACK · PROGRAMA DE FIDELIDADE</span>
+        <h1 class="proj-title reveal" data-reveal-delay="120">Desejo Ourocard</h1>
+        <p class="proj-lead reveal" data-reveal-delay="180">Uma campanha sazonal de cashback da Dotz em parceria com o Banco do Brasil: usando o cartão de crédito Ourocard, o cliente acumula pontos, alcança categorias e troca por vouchers e vale-compras. Atuei no hotsite que conecta pontuação, metas e resgates em um só lugar.</p>
+
+        <ul class="proj-meta reveal" data-reveal-delay="240">
+          <li class="meta-item">
+            <span class="meta-label">Papel</span>
+            <span class="meta-value">Product Designer Sênior</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Time</span>
+            <span class="meta-value">Squad de 10 pessoas</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Foco</span>
+            <span class="meta-value">Experiência de resgate</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="hero-shot reveal" data-reveal-delay="120">
+      <img src="assets/desejo-ourocard/hero.jpg" width="2200" height="1085" alt="Hotsite do Desejo Ourocard exibido na tela de abertura da campanha">
+    </figure>
+  </section>
+
+  <!-- ============ SOBRE O PROJETO ============ -->
+  <section class="section proj-section" id="sobre-projeto">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">O PROJETO</span>
+          <h2 class="proj-about-title">Uma campanha que transforma o uso do cartão em recompensa.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">O Desejo Ourocard é uma campanha de cashback criada pela Dotz em parceria com o Banco do Brasil. Ao usar o cartão de crédito Ourocard, pessoas físicas e jurídicas acumulam pontos e avançam por categorias — as lâmpadas de bronze, prata e ouro — que liberam a troca por vouchers e vale-compras. O cadastro é feito uma única vez: quem já participou entra automaticamente nas temporadas seguintes, sem recomeçar.</p>
+          <p class="proj-about-text">Entrei como Product Designer Sênior em uma squad multidisciplinar de dez pessoas. Meu trabalho cobria o escopo completo de cada problema ou melhoria — do entendimento à interface final. Investigava a fundo cada necessidade com dados e conversas reais, levantava hipóteses, prototipava, testava com usuários e acompanhava a entrega até o fim, garantindo fidelidade ao que foi desenhado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN SYSTEM ============ -->
+  <section class="section proj-section" id="design-system">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">DESIGN SYSTEM</span>
+          <h2 class="proj-about-title">Construído sobre o DHARMA, o design system da Dotz.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">Todo o trabalho foi desenhado dentro do DHARMA, o robusto design system da Dotz. Trabalhar sobre uma base madura de componentes e tokens deu consistência ao hotsite e velocidade ao time — o esforço ia menos para reinventar padrões e mais para resolver o problema certo do usuário em cada tela.</p>
+        </div>
+      </div>
+
+      <figure class="ds-hero reveal">
+        <img src="assets/desejo-ourocard/cores.jpg" width="1600" height="800" loading="lazy" alt="Paleta de cores utilizada no Desejo Ourocard, a partir do design system DHARMA">
+        <figcaption class="ds-caption">Paleta e tokens de cor</figcaption>
+      </figure>
+
+      <figure class="ds-hero reveal">
+        <img src="assets/desejo-ourocard/tipografia.jpg" width="1600" height="1200" loading="lazy" alt="Escala tipográfica do design system DHARMA aplicada ao Desejo Ourocard">
+        <figcaption class="ds-caption">Escala tipográfica</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ O QUE EU FAZIA ============ -->
+  <section class="section proj-section" id="o-que-eu-fazia">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">O QUE EU FAZIA</span>
+        <h2 class="section-title">Da descoberta orientada por dados à entrega acompanhada de perto.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Discovery &amp; Benchmark</h3>
+          <p class="task-desc">Investigava o problema com stakeholders e analisava referências de mercado antes de desenhar qualquer solução.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">Dados &amp; Insights</h3>
+          <p class="task-desc">Cruzava mapas de calor do Hotjar com tickets de atendimento para entender onde o usuário travava de verdade.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Entrevistas &amp; Facilitação</h3>
+          <p class="task-desc">Ouvia usuários e facilitava demandas, alinhando prioridades entre as áreas envolvidas.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">04</span>
+          <h3 class="task-title">Protótipos</h3>
+          <p class="task-desc">Prototipava soluções para validar ideias rápido, antes de entrar em desenvolvimento.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">05</span>
+          <h3 class="task-title">Testes de Usabilidade</h3>
+          <p class="task-desc">Validava as soluções com usuários reais e ajustava o desenho a partir do que observava.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="180">
+          <span class="task-num">06</span>
+          <h3 class="task-title">Handoff &amp; Acompanhamento</h3>
+          <p class="task-desc">Documentava e acompanhava o desenvolvimento de perto, garantindo fidelidade ao design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TELAS / ÁREAS DO HOTSITE ============ -->
+  <section class="section proj-section" id="modulos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">O HOTSITE</span>
+        <h2 class="section-title">Da campanha à conquista, em um só lugar.</h2>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/desejo-ourocard/home-desktop.jpg" width="2000" height="1300" loading="lazy" alt="Home do Desejo Ourocard explicando como participar: cadastre-se, use e ganhe">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">01</span>
+            <h3 class="feature-title">A home da campanha</h3>
+            <p class="feature-desc">A porta de entrada explica em três passos como participar — cadastrar, usar o Ourocard e ganhar prêmios — com destaque para a temporada vigente. Atende tanto pessoa física quanto jurídica.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/desejo-ourocard/conquistas-desktop.jpg" width="2000" height="1300" loading="lazy" alt="Área logada do Desejo Ourocard com histórico mensal, metas, lâmpadas e resgates">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">02</span>
+            <h3 class="feature-title">Área logada: histórico e conquistas</h3>
+            <p class="feature-desc">Mês a mês, o cliente acompanha o quanto atingiu da meta, qual lâmpada conquistou — bronze, prata ou ouro —, os desafios completados e os prêmios resgatados, com status de entrega de cada vale-compras.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GANHOS ALCANÇADOS ============ -->
+  <section class="section proj-section" id="ganhos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">GANHOS ALCANÇADOS</span>
+        <h2 class="section-title">Uma campanha que se renova temporada após temporada.</h2>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Campanha consolidada</h3>
+          <p class="result-desc">No ar há mais de seis anos, o Desejo Ourocard se renova a cada temporada — sinal de uma parceria que se sustenta no tempo.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="80">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Metas atingidas</h3>
+          <p class="result-desc">Ano após ano, a campanha alcança os resultados esperados pela parceria entre Dotz e Banco do Brasil.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="160">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Experiência mais clara</h3>
+          <p class="result-desc">Um hotsite que torna simples entender a pontuação, acompanhar metas e resgatar prêmios no tempo certo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A HOME (DESKTOP + MOBILE) — exclusivo deste case ============ -->
+  <section class="section proj-section" id="a-home">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">PÁGINAS COMPLETAS</span>
+        <h2 class="section-title">Visão geral das páginas.</h2>
+      </div>
+
+      <div class="home-stack reveal">
+        <figure class="home-item">
+          <img src="assets/desejo-ourocard/meuspontos.jpg" width="1400" height="1934" loading="lazy" alt="Página completa de histórico e conquistas do Desejo Ourocard">
+          <figcaption class="home-cap">Histórico e conquistas — página completa</figcaption>
+        </figure>
+        <figure class="home-item">
+          <img src="assets/desejo-ourocard/hotsite-pj-full.jpg" width="1200" height="2884" loading="lazy" alt="Hotsite completo do Desejo Ourocard na versão pessoa jurídica">
+          <figcaption class="home-cap">Hotsite completo — versão PJ</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer proj-footer">
+    <div class="footer-shell">
+      <div class="footer-top footer-row">
+        <div class="footer-brand">
+          <p class="footer-name">Cassio Bazana</p>
+          <p class="footer-role">Product Designer</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-cta-link" href="index.html">Ver todos os trabalhos</a>
+          <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Entre em contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom footer-row">
+        <p>© 2026&nbsp; Cassio Bazana</p>
+        <p>Powered by Cassio Bazana</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem">
+      <span aria-hidden="true">×</span>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
