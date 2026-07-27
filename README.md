@@ -1,6 +1,8 @@
-# Bazana Digital — Site
+# Cassio Bazana — Portfólio
 
-Portfólio da Bazana Digital. Site estático (HTML/CSS/JS), publicado via Vercel.
+Portfólio pessoal de Cassio Bazana, Product Designer (UX/UI). Site estático (HTML/CSS/JS), publicado via Vercel.
+
+🔗 https://cassiobazana-portfolio.vercel.app
 
 ## Estrutura
 - `index.html` — home
