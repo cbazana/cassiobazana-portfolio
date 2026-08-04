@@ -230,7 +230,80 @@
     "Clientes mais satisfeitos": "More satisfied clients",
     "Melhora na percepção dos clientes ao criar e aprovar fluxos no dia a dia.": "An improved client perception when creating and approving flows day to day.",
     // CTA projeto
-    "Ver todos os trabalhos": "See all works"
+    "Ver todos os trabalhos": "See all works",
+
+    // ===== Página de projeto: Fretes sem fila =====
+    "APP MOBILE · LOGÍSTICA E AGRONEGÓCIO": "MOBILE APP · LOGISTICS & AGRIBUSINESS",
+    "Fretes sem fila": "Freight without the queue",
+    "App que conecta caminhoneiros às melhores cargas em tempo real e reorganiza a fila nas fábricas, reduzindo em 65% o tempo de espera por novos fretes.": "A mobile app that connects truck drivers to the best loads in real time and reorganizes the queue at the plants, cutting waiting time for new freight by 65%.",
+    "Product Designer, do início à entrega do MVP": "Product Designer, from kickoff to MVP delivery",
+    "PM e 3 UX Designers": "PM and 3 UX Designers",
+    "Pesquisa de campo, UX e definição do produto": "Field research, UX and product definition",
+    // O desafio
+    "O DESAFIO": "THE CHALLENGE",
+    "Dias parados na fila enquanto as melhores cargas ficavam com intermediários.": "Days lost in the queue while the best loads went to middlemen.",
+    "Uma das maiores exportadoras de grãos do país enfrentava um gargalo caro na ponta logística: caminhoneiros perdiam dias em fila para carregar e descarregar milho e soja nas fábricas, e a emissão das ordens de carregamento vivia congestionada.": "One of the country's largest grain exporters faced a costly bottleneck at the logistics edge: truck drivers lost days queuing to load and unload corn and soy at the plants, and issuing loading orders was constantly jammed.",
+    "Do outro lado, o motorista autônomo ficava com o pior dos dois mundos: as melhores cargas eram capturadas por intermediários em grupos de WhatsApp, e sobravam a ele os fretes ruins, quando sobravam.": "On the other side, the independent driver got the worst of both worlds: the best loads were captured by middlemen in WhatsApp groups, leaving him the bad freight, when any was left.",
+    "O pedido era direto: reduzir o tempo perdido na fila por novos fretes e dar aos caminhoneiros acesso às melhores cargas. Entrei como Product Designer atuando de ponta a ponta, da pesquisa inicial à entrega do MVP.": "The ask was direct: cut the time lost queuing for new freight and give drivers access to the best loads. I joined as Product Designer working end to end, from initial research to MVP delivery.",
+    // A pesquisa
+    "A PESQUISA": "THE RESEARCH",
+    "Antes de desenhar uma tela, fui a campo.": "Before designing a single screen, I went to the field.",
+    "Entrevistei e observei caminhoneiros em três regiões com perfis opostos, de motoristas mais velhos, com baixa escolaridade e desconfiados de tecnologia, a autônomos jovens e fluentes em apps. Rodei um benchmark de 8 aplicativos de frete, construí 4 personas, mapeei a jornada de ponta a ponta e posicionei o produto contra os concorrentes.": "I interviewed and observed truck drivers across three regions with opposite profiles, from older, low-literacy drivers wary of technology to young, app-fluent independents. I ran a benchmark of 8 freight apps, built 4 personas, mapped the end-to-end journey and positioned the product against competitors.",
+    "O WhatsApp já era o sistema operacional do frete": "WhatsApp was already the operating system of freight",
+    "90% usavam smartphone, mas a carga circulava por grupos, não por apps. Competir com isso exigia falar a mesma língua, não substituí-la.": "90% used a smartphone, but loads moved through groups, not apps. Competing meant speaking the same language, not replacing it.",
+    "Desconfiança profunda": "Deep distrust",
+    "O motorista tinha medo de apertar botões e confirmar operações sem enxergar a consequência da ação.": "Drivers were afraid to press buttons and confirm actions without seeing the consequence.",
+    "Agendar não garantia frete": "Scheduling didn't guarantee freight",
+    "Nos concorrentes, dava para agendar, mas a carga raramente era liberada depois, o que virava frustração e abandono.": "With competitors you could schedule, but the load was rarely released afterward, which turned into frustration and drop-off.",
+    "Nenhuma transparência de valor": "No price transparency",
+    "Ninguém mostrava o valor final do frete nem o piso mínimo da ANTT antes do aceite.": "No one showed the final freight value or the ANTT minimum rate before accepting.",
+    "Intermediários no meio do caminho": "Middlemen in the way",
+    "Grupos e cooperativas capturavam as melhores cargas, penalizando quem operava sozinho.": "Groups and co-ops captured the best loads, penalizing those who worked alone.",
+    // Princípios de design
+    "PRINCÍPIOS DE DESIGN": "DESIGN PRINCIPLES",
+    "Cada tela decidida pela pesquisa, não por achismo.": "Every screen decided by research, not guesswork.",
+    "Sem medo de errar": "No fear of mistakes",
+    "Cada ação confirmável mostra a consequência e permite cancelar sem punição. Foi o que destravou a desconfiança.": "Every confirmable action shows its consequence and can be cancelled without penalty. That's what unlocked the distrust.",
+    "A língua do caminhoneiro": "The driver's language",
+    "Ícones e padrões que ele já reconhece (WhatsApp, placas de estrada), textos curtos e diretos, poucas telas por tarefa.": "Icons and patterns they already know (WhatsApp, road signs), short direct copy, few screens per task.",
+    "Transparência de valor": "Price transparency",
+    "Simulação com valor final e km da origem ao destino, e o piso da ANTT sempre visível.": "Simulation with final value and km from origin to destination, and the ANTT floor always visible.",
+    "Agendar é receber": "Scheduling means loading",
+    "O agendamento passa a efetivamente liberar a carga e gerar a ordem, acabando com a promessa vazia.": "Scheduling now actually releases the load and issues the order, ending the empty promise.",
+    "Primeiro acesso livre": "Free first access",
+    "Ver cargas e simular frete sem cadastro obrigatório, reduzindo a barreira de entrada.": "Browse loads and simulate freight with no mandatory signup, lowering the barrier to entry.",
+    // A solução
+    "A SOLUÇÃO": "THE SOLUTION",
+    "Um app desenhado para o motorista, não para a operação.": "An app designed for the driver, not for operations.",
+    "As decisões da pesquisa viraram quatro capacidades centrais.": "The research decisions became four core capabilities.",
+    "Visão geral da viagem": "The trip at a glance",
+    "Ao abrir o app, o motorista já vê a próxima viagem, origem e destino, a carga e os atalhos principais. Tudo o que importa numa tela, sem precisar procurar.": "The moment the driver opens the app, the next trip, origin and destination, cargo and key shortcuts are right there. Everything that matters on one screen, no searching.",
+    "Cargas em tempo real": "Real-time loads",
+    "O motorista vê as cargas de soja e milho disponíveis na hora, com busca por rota, filtros e o valor por tonelada. Cada uma marcada como sem intermediário.": "The driver sees available soy and corn loads instantly, with route search, filters and the price per ton — each one marked as no-middleman.",
+    "Frete transparente": "Transparent freight",
+    "Simulação com o valor final do frete, km da origem ao destino e o piso mínimo da ANTT sempre visível. O motorista sabe quanto vai receber antes de aceitar.": "Simulation with the final freight value, km from origin to destination and the ANTT minimum always visible. The driver knows what he'll earn before accepting.",
+    "O agendamento efetivamente libera a carga e gera a ordem de carregamento no app, acabando com a promessa vazia dos concorrentes.": "Scheduling actually releases the load and generates the loading order in the app, ending competitors' empty promises.",
+    "Antes de confirmar, o motorista vê exatamente o que está agendando e a mensagem de que pode cancelar depois, sem multa. É o que tira o medo de apertar o botão.": "Before confirming, the driver sees exactly what he's scheduling and the message that he can cancel later, with no penalty. That's what takes away the fear of tapping the button.",
+    // Resultados
+    "RESULTADOS": "RESULTS",
+    "Menos espera, mais previsibilidade.": "Less waiting, more predictability.",
+    "−65% no tempo de espera": "−65% waiting time",
+    "Menos tempo perdido na fila por novos fretes.": "Less time lost in the queue for new freight.",
+    "Fila reorganizada": "Reorganized queue",
+    "Uma fila mais previsível e justa para o motorista.": "A more predictable, fairer queue for the driver.",
+    "Boa adoção": "Strong adoption",
+    "Boa adesão dos caminhoneiros já na fase inicial.": "Strong uptake among drivers in the early phase.",
+    // Placeholders de imagem (mockups em breve)
+    "Imagem principal · mockup do app": "Hero image · app mockup",
+    "Imagem · pesquisa de campo, personas ou jornada": "Image · field research, personas or journey",
+    "Benchmark de 8 apps de frete": "Benchmark of 8 freight apps",
+    "Uma das 4 personas de motorista": "One of the 4 driver personas",
+    "Mapa de jornada de ponta a ponta": "End-to-end journey map",
+    "Tela · lista de cargas": "Screen · loads list",
+    "Tela · simulação de frete": "Screen · freight simulation",
+    "Tela · agendamento e ordem": "Screen · scheduling and order",
+    "Tela · confirmação e fila": "Screen · confirmation and queue",
+    "em breve": "coming soon"
   };
 
   // Indexa os nós de texto traduzíveis uma única vez
@@ -264,6 +337,11 @@
       if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
       var alt = img.getAttribute(lang === "en" ? "data-alt-en" : "data-alt-pt");
       if (alt) img.setAttribute("alt", alt);
+    });
+    // Currículo: abre o PDF do idioma ativo (PT / EN)
+    document.querySelectorAll("a[data-href-pt][data-href-en]").forEach(function (link) {
+      var href = link.getAttribute(lang === "en" ? "data-href-en" : "data-href-pt");
+      if (href) link.setAttribute("href", href);
     });
     document.documentElement.setAttribute("lang", lang === "en" ? "en" : "pt-BR");
     if (langLabel) langLabel.textContent = lang === "en" ? "ENG" : "PT";

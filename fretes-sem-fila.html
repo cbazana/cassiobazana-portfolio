@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fretes sem fila — Cassio Bazana · Product Designer</title>
+  <meta name="description" content="Fretes sem fila: app mobile de fretes de grãos que conecta caminhoneiros às melhores cargas em tempo real e reduziu em 65% o tempo de espera na fila por novos fretes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo-avatar.png">
+  <style>
+    /* Placeholders temporários para as imagens ainda não entregues (mockups em breve).
+       Usam os tokens dark do tema (styles.css). Escopo local desta página. */
+    .shot-ph{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;text-align:center;
+      width:100%;min-height:340px;padding:32px;
+      color:var(--white-40);font-family:var(--font-body);font-size:14px;letter-spacing:.03em;
+      border-radius:var(--radius-lg);border:1px solid var(--border);
+      background:repeating-linear-gradient(45deg,
+        var(--surface) 0, var(--surface) 12px,
+        var(--surface-hover) 12px, var(--surface-hover) 24px);}
+    .hero-shot .shot-ph{min-height:520px;box-shadow:0 40px 120px rgba(0,0,0,.55)}
+    .shot .shot-ph{min-height:360px;border:0;border-radius:0}
+    .shot-ph .ph-sub{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+  </style>
+</head>
+<body class="page-project">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-avatar" src="assets/logo-avatar.png" alt="Cassio Bazana" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Cassio Bazana</span>
+          <span class="brand-role">Product Designer</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="index.html#cases">Cases</a>
+        <a class="nav-link" href="index.html#trabalhos">Trabalhos</a>
+        <a class="nav-link" href="index.html#sobre">Sobre</a>
+        <a class="nav-link" href="index.html#depoimentos">Depoimentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-wrap">
+          <button class="lang-switch" id="lang-switch" type="button" aria-label="Idioma" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-icon icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:4.17%;"><img src="assets/icon-earth.svg" alt=""></i>
+            </span>
+            <span class="lang-label" id="lang-label">PT</span>
+            <span class="lang-chevron icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:33.33% 18.75% 33.33% 22.92%;"><img src="assets/icon-chevron.svg" alt=""></i>
+            </span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="Idioma">
+            <button class="lang-option" type="button" role="option" data-lang="pt">PT</button>
+            <button class="lang-option" type="button" role="option" data-lang="en">ENG</button>
+          </div>
+        </div>
+        <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Vamos Trabalhar Juntos</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO DO PROJETO ============ -->
+  <section class="proj-hero">
+    <div class="container">
+      <a class="proj-back reveal" href="index.html">
+        <span class="proj-back-arrow" aria-hidden="true">←</span> Voltar
+      </a>
+
+      <div class="proj-hero-text">
+        <span class="badge reveal" data-reveal-delay="60">APP MOBILE · LOGÍSTICA E AGRONEGÓCIO</span>
+        <h1 class="proj-title reveal" data-reveal-delay="120">Fretes sem fila</h1>
+        <p class="proj-lead reveal" data-reveal-delay="180">App que conecta caminhoneiros às melhores cargas em tempo real e reorganiza a fila nas fábricas, reduzindo em 65% o tempo de espera por novos fretes.</p>
+
+        <ul class="proj-meta reveal" data-reveal-delay="240">
+          <li class="meta-item">
+            <span class="meta-label">Papel</span>
+            <span class="meta-value">Product Designer, do início à entrega do MVP</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Time</span>
+            <span class="meta-value">PM e 3 UX Designers</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Foco</span>
+            <span class="meta-value">Pesquisa de campo, UX e definição do produto</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="hero-shot reveal" data-reveal-delay="120">
+      <img src="assets/frete-carga/hero.jpg" width="2200" height="1222" alt="Três telas do app Fretes sem fila em celulares">
+    </figure>
+  </section>
+
+  <!-- ============ O DESAFIO ============ -->
+  <section class="section proj-section" id="desafio">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">O DESAFIO</span>
+          <h2 class="proj-about-title">Dias parados na fila enquanto as melhores cargas ficavam com intermediários.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">Uma das maiores exportadoras de grãos do país enfrentava um gargalo caro na ponta logística: caminhoneiros perdiam dias em fila para carregar e descarregar milho e soja nas fábricas, e a emissão das ordens de carregamento vivia congestionada.</p>
+          <p class="proj-about-text">Do outro lado, o motorista autônomo ficava com o pior dos dois mundos: as melhores cargas eram capturadas por intermediários em grupos de WhatsApp, e sobravam a ele os fretes ruins, quando sobravam.</p>
+          <p class="proj-about-text">O pedido era direto: reduzir o tempo perdido na fila por novos fretes e dar aos caminhoneiros acesso às melhores cargas. Entrei como Product Designer atuando de ponta a ponta, da pesquisa inicial à entrega do MVP.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A PESQUISA ============ -->
+  <section class="section proj-section" id="pesquisa">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">A PESQUISA</span>
+          <h2 class="proj-about-title">Antes de desenhar uma tela, fui a campo.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">Entrevistei e observei caminhoneiros em três regiões com perfis opostos, de motoristas mais velhos, com baixa escolaridade e desconfiados de tecnologia, a autônomos jovens e fluentes em apps. Rodei um benchmark de 8 aplicativos de frete, construí 4 personas, mapeei a jornada de ponta a ponta e posicionei o produto contra os concorrentes.</p>
+        </div>
+      </div>
+
+      <div class="task-grid" style="margin-top:64px">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">O WhatsApp já era o sistema operacional do frete</h3>
+          <p class="task-desc">90% usavam smartphone, mas a carga circulava por grupos, não por apps. Competir com isso exigia falar a mesma língua, não substituí-la.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">Desconfiança profunda</h3>
+          <p class="task-desc">O motorista tinha medo de apertar botões e confirmar operações sem enxergar a consequência da ação.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Agendar não garantia frete</h3>
+          <p class="task-desc">Nos concorrentes, dava para agendar, mas a carga raramente era liberada depois, o que virava frustração e abandono.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">04</span>
+          <h3 class="task-title">Nenhuma transparência de valor</h3>
+          <p class="task-desc">Ninguém mostrava o valor final do frete nem o piso mínimo da ANTT antes do aceite.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">05</span>
+          <h3 class="task-title">Intermediários no meio do caminho</h3>
+          <p class="task-desc">Grupos e cooperativas capturavam as melhores cargas, penalizando quem operava sozinho.</p>
+        </article>
+      </div>
+
+      <figure class="ds-hero reveal" style="margin-top:48px">
+        <img src="assets/frete-carga/benchmark.jpg" width="1600" height="850" loading="lazy" alt="Tabela de benchmark comparando 8 aplicativos de frete">
+        <figcaption class="ds-caption">Benchmark de 8 apps de frete</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ PRINCÍPIOS DE DESIGN ============ -->
+  <section class="section proj-section" id="principios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">PRINCÍPIOS DE DESIGN</span>
+        <h2 class="section-title">Cada tela decidida pela pesquisa, não por achismo.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Sem medo de errar</h3>
+          <p class="task-desc">Cada ação confirmável mostra a consequência e permite cancelar sem punição. Foi o que destravou a desconfiança.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">A língua do caminhoneiro</h3>
+          <p class="task-desc">Ícones e padrões que ele já reconhece (WhatsApp, placas de estrada), textos curtos e diretos, poucas telas por tarefa.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Transparência de valor</h3>
+          <p class="task-desc">Simulação com valor final e km da origem ao destino, e o piso da ANTT sempre visível.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">04</span>
+          <h3 class="task-title">Agendar é receber</h3>
+          <p class="task-desc">O agendamento passa a efetivamente liberar a carga e gerar a ordem, acabando com a promessa vazia.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">05</span>
+          <h3 class="task-title">Primeiro acesso livre</h3>
+          <p class="task-desc">Ver cargas e simular frete sem cadastro obrigatório, reduzindo a barreira de entrada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A SOLUÇÃO ============ -->
+  <section class="section proj-section" id="solucao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">A SOLUÇÃO</span>
+        <h2 class="section-title">Um app desenhado para o motorista, não para a operação.</h2>
+      </div>
+
+      <p class="ds-text reveal">As decisões da pesquisa viraram quatro capacidades centrais.</p>
+
+      <div class="feature-list" style="margin-top:64px">
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/frete-carga/inicio.jpg" width="1600" height="1200" loading="lazy" alt="Tela inicial do app com a próxima viagem e atalhos">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">01</span>
+            <h3 class="feature-title">Visão geral da viagem</h3>
+            <p class="feature-desc">Ao abrir o app, o motorista já vê a próxima viagem, origem e destino, a carga e os atalhos principais. Tudo o que importa numa tela, sem precisar procurar.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/frete-carga/ofertas.jpg" width="1600" height="1200" loading="lazy" alt="Lista de cargas de grãos disponíveis com preço por tonelada">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">02</span>
+            <h3 class="feature-title">Cargas em tempo real</h3>
+            <p class="feature-desc">O motorista vê as cargas de soja e milho disponíveis na hora, com busca por rota, filtros e o valor por tonelada. Cada uma marcada como sem intermediário.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/frete-carga/simular-frete.jpg" width="1600" height="1200" loading="lazy" alt="Telas de simulação de frete com valor final e piso mínimo da ANTT">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">03</span>
+            <h3 class="feature-title">Frete transparente</h3>
+            <p class="feature-desc">Simulação com o valor final do frete, km da origem ao destino e o piso mínimo da ANTT sempre visível. O motorista sabe quanto vai receber antes de aceitar.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/frete-carga/detalhe-carga.jpg" width="1600" height="1200" loading="lazy" alt="Telas de detalhe da carga e agendamento no app">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">04</span>
+            <h3 class="feature-title">Agendar é receber</h3>
+            <p class="feature-desc">O agendamento efetivamente libera a carga e gera a ordem de carregamento no app, acabando com a promessa vazia dos concorrentes.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/frete-carga/confirmacao.jpg" width="1600" height="1200" loading="lazy" alt="Tela de confirmação de agendamento com aviso de cancelamento sem multa">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">05</span>
+            <h3 class="feature-title">Sem medo de errar</h3>
+            <p class="feature-desc">Antes de confirmar, o motorista vê exatamente o que está agendando e a mensagem de que pode cancelar depois, sem multa. É o que tira o medo de apertar o botão.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADOS ============ -->
+  <section class="section proj-section" id="resultados">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">RESULTADOS</span>
+        <h2 class="section-title">Menos espera, mais previsibilidade.</h2>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">−65% no tempo de espera</h3>
+          <p class="result-desc">Menos tempo perdido na fila por novos fretes.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="80">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Fila reorganizada</h3>
+          <p class="result-desc">Uma fila mais previsível e justa para o motorista.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="160">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">Boa adoção</h3>
+          <p class="result-desc">Boa adesão dos caminhoneiros já na fase inicial.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer proj-footer">
+    <div class="footer-shell">
+      <div class="footer-top footer-row">
+        <div class="footer-brand">
+          <p class="footer-name">Cassio Bazana</p>
+          <p class="footer-role">Product Designer</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-cta-link" href="index.html">Ver todos os trabalhos</a>
+          <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Entre em contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom footer-row">
+        <p>© 2026&nbsp; Cassio Bazana</p>
+        <p>Powered by Cassio Bazana</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem">
+      <span aria-hidden="true">×</span>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -4,3 +4,6 @@ _removidos/
 _handoff-*.md
 _resumo-*.md
 *-conteudo.md
+
+# fontes pesadas de imagem (mantidas só localmente)
+assets/frete-carga/*.png
