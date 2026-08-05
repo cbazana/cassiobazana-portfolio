@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornada de escolha única — Cassio Bazana · Product Designer</title>
+  <meta name="description" content="Recriei a PLP e a PDP da Pravaler para o usuário chegar à proposta sem repetir escolhas entre squads. O abandono pela causa principal caiu de 13% para 4%.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo-avatar.png">
+  <style>
+    /* Placeholders temporários para as imagens ainda não entregues (telas e processo em breve).
+       Usam os tokens dark do tema (styles.css). Escopo local desta página. */
+    .shot-ph{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;text-align:center;
+      width:100%;min-height:340px;padding:32px;
+      color:var(--white-40);font-family:var(--font-body);font-size:14px;letter-spacing:.03em;
+      border-radius:var(--radius-lg);border:1px solid var(--border);
+      background:repeating-linear-gradient(45deg,
+        var(--surface) 0, var(--surface) 12px,
+        var(--surface-hover) 12px, var(--surface-hover) 24px);}
+    .hero-shot .shot-ph{min-height:520px;box-shadow:0 40px 120px rgba(0,0,0,.55)}
+    .shot .shot-ph{min-height:360px;border:0;border-radius:0}
+    .ds-hero .shot-ph{min-height:420px}
+    .shot-ph .ph-sub{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+    /* Solução: mesma diagramação em todas as telas (sem alternância) no desktop.
+       No mobile (<=1100px) o CSS base empilha tudo com a imagem antes do texto. */
+    @media (min-width:1101px){
+      .feature-row:nth-child(even){grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+      .feature-row:nth-child(even) > .shot{order:0}
+      .feature-row:nth-child(even) > .feature-text{order:0}
+    }
+    /* Compliance: citação de destaque */
+    .pull-quote{padding:44px 52px;border-radius:var(--radius-lg);border:1px solid var(--border);border-left:3px solid var(--accent);background:var(--surface)}
+    .pull-quote .pq-label{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+    .pull-quote .pq-quote{font-family:var(--font-display);font-weight:500;font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-top:16px}
+    .pull-quote .pq-context{font-size:17px;line-height:1.65;color:var(--white-70);max-width:780px;margin-top:20px}
+    @media (max-width:640px){.pull-quote{padding:32px 24px}}
+  </style>
+</head>
+<body class="page-project">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-avatar" src="assets/logo-avatar.png" alt="Cassio Bazana" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Cassio Bazana</span>
+          <span class="brand-role">Product Designer</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="index.html#cases">Cases</a>
+        <a class="nav-link" href="index.html#trabalhos">Trabalhos</a>
+        <a class="nav-link" href="index.html#sobre">Sobre</a>
+        <a class="nav-link" href="index.html#depoimentos">Depoimentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-wrap">
+          <button class="lang-switch" id="lang-switch" type="button" aria-label="Idioma" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-icon icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:4.17%;"><img src="assets/icon-earth.svg" alt=""></i>
+            </span>
+            <span class="lang-label" id="lang-label">PT</span>
+            <span class="lang-chevron icon-box" style="--w:24px;--h:24px;">
+              <i class="ip" style="inset:33.33% 18.75% 33.33% 22.92%;"><img src="assets/icon-chevron.svg" alt=""></i>
+            </span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="Idioma">
+            <button class="lang-option" type="button" role="option" data-lang="pt">PT</button>
+            <button class="lang-option" type="button" role="option" data-lang="en">ENG</button>
+          </div>
+        </div>
+        <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Vamos Trabalhar Juntos</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO DO PROJETO ============ -->
+  <section class="proj-hero">
+    <div class="container">
+      <a class="proj-back reveal" href="index.html">
+        <span class="proj-back-arrow" aria-hidden="true">←</span> Voltar
+      </a>
+
+      <div class="proj-hero-text">
+        <span class="badge reveal" data-reveal-delay="60">PLATAFORMA WEB · PRAVALER</span>
+        <h1 class="proj-title reveal" data-reveal-delay="120">Uma jornada de escolha única</h1>
+        <p class="proj-lead reveal" data-reveal-delay="180">Recriei a PLP e a PDP da Pravaler para o usuário chegar à proposta com a escolha que já havia feito, sem repetir etapas entre squads. O abandono pela causa principal caiu de 13% para 4%.</p>
+
+        <ul class="proj-meta reveal" data-reveal-delay="240">
+          <li class="meta-item">
+            <span class="meta-label">Papel</span>
+            <span class="meta-value">Product Designer Especialista</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Time</span>
+            <span class="meta-value">Squad de descoberta</span>
+          </li>
+          <li class="meta-item">
+            <span class="meta-label">Foco</span>
+            <span class="meta-value">Jornada de descoberta</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="hero-shot reveal" data-reveal-delay="120">
+      <img src="assets/financiamento-estudantil/hero.jpg" width="2200" height="1238" alt="Telas finais da PLP e da PDP">
+    </figure>
+  </section>
+
+  <!-- ============ O DESAFIO ============ -->
+  <section class="section proj-section" id="desafio">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">O DESAFIO</span>
+          <h2 class="proj-about-title">O usuário escolhia o curso, começava a contratação e tinha que escolher tudo de novo.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">A Pravaler é uma fintech de financiamento estudantil, crédito para o aluno pagar a faculdade. A descoberta de cursos vivia numa página legado: lenta, com problemas de acessibilidade e de heurística, e sem comunicar a proposta de valor da marca para quem chegava. E quem chega ali é um público valioso, tráfego incremental e qualificado, que converte bem, mas que na maioria ainda não conhece a marca.</p>
+          <p class="proj-about-text">O problema real não era ter passos demais. A decisão de financiar estava quebrada entre duas squads: o usuário escolhia curso e SKU na descoberta e, ao entrar no fluxo de contratação, precisava escolher de novo. A repetição gerava insegurança num processo longo, e ele desistia antes de ver a proposta.</p>
+          <p class="proj-about-text">A dificuldade de compreender o financiamento amplificava tudo, respondia por 13% do abandono e tirava a motivação justo onde o esforço era maior. Entrei como único designer do projeto, atuando de ponta a ponta, da descoberta à validação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A DESCOBERTA ============ -->
+  <section class="section proj-section" id="descoberta">
+    <div class="container">
+      <div class="proj-about reveal">
+        <div class="about-head">
+          <span class="badge">A DESCOBERTA</span>
+          <h2 class="proj-about-title">Dois instrumentos independentes, uma mesma dor.</h2>
+        </div>
+        <div class="about-body">
+          <p class="proj-about-text">Cruzei duas fontes que não conversam entre si: pesquisas de abandono (dropout no Hotjar) e tickets de atendimento do CS. Quando as duas apontam para o mesmo lugar, a chance de estar perseguindo um problema real, e não uma percepção, sobe muito. Sintetizei tudo numa matriz CSD (Certezas, Suposições, Dúvidas), construída com PM, tech e marketing, para separar dado de achismo antes de propor qualquer solução.</p>
+        </div>
+      </div>
+
+      <div class="task-grid" style="margin-top:64px">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Compreender o financiamento era a maior dificuldade</h3>
+          <p class="task-desc">O usuário não entendia o que estava contratando nem o benefício. Sozinha, essa dor respondia por 13% do abandono.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">O valor aparecia tarde demais</h3>
+          <p class="task-desc">Os valores só ficavam claros na simulação da proposta, e apenas cerca de 8% dos visitantes chegavam até lá. A maioria desistia antes de ver o que a convenceria.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">A escolha era feita duas vezes</h3>
+          <p class="task-desc">Havia dois caminhos para escolher curso e SKU na descoberta e, ao entrar no fluxo de contratação de outra squad, o usuário refazia tudo. Repetição virava insegurança, e insegurança virava desistência.</p>
+        </article>
+      </div>
+
+      <figure class="ds-hero reveal" style="margin-top:48px">
+        <img src="assets/financiamento-estudantil/matriz-csd.jpg" width="1600" height="1053" loading="lazy" alt="Matriz CSD com Certezas, Suposições e Dúvidas construída com a squad">
+        <figcaption class="ds-caption">Síntese da descoberta em Certezas, Suposições e Dúvidas</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ ESTRATÉGIA E PRIORIZAÇÃO ============ -->
+  <section class="section proj-section" id="estrategia">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">ESTRATÉGIA E PRIORIZAÇÃO</span>
+        <h2 class="section-title">Decidi os caminhos antes de desenhar as telas.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Opportunity Solution Tree</h3>
+          <p class="task-desc">Liguei o resultado que eu queria mover, reduzir o abandono até a proposta, às oportunidades e às soluções candidatas. Assim eu discutia caminhos, não pixels.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">Benchmark facilitado por mim</h3>
+          <p class="task-desc">Conduzi uma dinâmica com a squad e stakeholders sobre quatro referências, dois concorrentes diretos e dois players de fora do setor. O grupo votava o que usar e o que descartar. Saí com o escopo do protótipo mapeado e a squad comprada na decisão.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Esforço x impacto e parking lot</h3>
+          <p class="task-desc">Medi esforço contra impacto junto com tech e cortei o que não fazia sentido na primeira entrega. Nada foi jogado fora: o descartado foi para um parking lot, o que deu previsibilidade de escopo.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">04</span>
+          <h3 class="task-title">Métricas definidas antes de desenhar</h3>
+          <p class="task-desc">Fechei como mediria sucesso antes da primeira tela: o abandono como estrela-guia e um teste A/B controlado como prova. Isso evita comemorar qualquer número no fim.</p>
+        </article>
+      </div>
+
+      <div class="ds-figs reveal">
+        <figure class="ds-hero">
+          <img src="assets/financiamento-estudantil/benchmark.jpg" width="1600" height="929" loading="lazy" alt="Benchmark de funcionalidades do projeto">
+          <figcaption class="ds-caption">Benchmark de funcionalidades avaliado com a squad</figcaption>
+        </figure>
+        <figure class="ds-hero">
+          <img src="assets/financiamento-estudantil/matriz-esforco-impacto.jpg" width="1600" height="1013" loading="lazy" alt="Matriz de esforço e impacto do projeto">
+          <figcaption class="ds-caption">Priorização por esforço e impacto, com parking lot</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A SOLUÇÃO ============ -->
+  <section class="section proj-section" id="solucao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">A SOLUÇÃO</span>
+        <h2 class="section-title">Uma escolha, carregada até a proposta.</h2>
+      </div>
+
+      <p class="ds-text reveal">As decisões da descoberta viraram três movimentos.</p>
+
+      <div class="feature-list" style="margin-top:64px">
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/financiamento-estudantil/escolha-unica.jpg" width="1600" height="783" loading="lazy" alt="PLP com a escolha de curso e SKU feita uma única vez">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">01</span>
+            <h3 class="feature-title">A escolha uma vez só</h3>
+            <p class="feature-desc">Recriei a PLP, que antes não tinha cara de página de listagem, e a PDP para que a escolha de curso e SKU fosse feita uma única vez e viajasse com o usuário para dentro do fluxo de contratação. Ele deixa de reescolher e entra na contratação com o curso já definido.</p>
+          </div>
+        </article>
+
+        <article class="feature-row reveal">
+          <figure class="shot">
+            <img src="assets/financiamento-estudantil/valor-antecipado.jpg" width="1600" height="766" loading="lazy" alt="Proposta de valor do financiamento na primeira dobra da página">
+          </figure>
+          <div class="feature-text">
+            <span class="feature-index">02</span>
+            <h3 class="feature-title">Valor antecipado</h3>
+            <p class="feature-desc">Em vez de esconder o essencial até a simulação, trouxe a proposta de valor do financiamento e as informações de decisão, modalidade, turno, grade curricular, empregabilidade e selo oficial de avaliação, para a primeira dobra e ao longo da rolagem, com CTA presente em vários pontos. Dar motivo para seguir antes de pedir esforço.</p>
+          </div>
+        </article>
+
+        <blockquote class="pull-quote reveal">
+          <span class="pq-label">03 · Compliance na exibição de valores</span>
+          <p class="pq-quote">Precisão de informação financeira não se negocia. Compliance acima de conversão.</p>
+          <p class="pq-context">Onde havia divergência entre o valor da instituição e o do produto, mostrar um número impreciso era risco de compliance. Optei por não exibir nesses casos e conduzir o usuário à simulação para o número correto.</p>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALIDAÇÃO ============ -->
+  <section class="section proj-section" id="validacao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">VALIDAÇÃO</span>
+        <h2 class="section-title">Testei antes de comemorar.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Teste A/B controlado no Amplitude</h3>
+          <p class="task-desc">Comparei a página nova contra a antiga nos dois cursos mais procurados na base, para concentrar o teste onde havia mais demanda e ler o resultado em dez dias. Métrica primária, conversão de visitante em lead: a variante venceu nos dois, com 32% e 29% de aumento.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">O que eu deliberadamente não testei</h3>
+          <p class="task-desc">Deixei a versão com valores de fora do A/B. A página já carregava mudanças demais e incluir os valores contaminaria a leitura. Isolar a variável é o que separa um teste de uma torcida.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">Shadowing digital no Clarity</h3>
+          <p class="task-desc">Analisei gravações de tela e mapas de calor para achar fricções finas, como o checklist difícil no mobile e a posição das perguntas frequentes. Nada virou correção às pressas: transformei em um backlog priorizado de melhoria contínua.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADOS ============ -->
+  <section class="section proj-section" id="resultados">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">RESULTADOS</span>
+        <h2 class="section-title">Menos desistência, valor mais cedo.</h2>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">13% → 4% de abandono</h3>
+          <p class="result-desc">A causa principal do abandono, medida por dropout no Hotjar e tickets de CS, três meses após o lançamento e com a mesma base.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="80">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">+32% e +29% de conversão</h3>
+          <p class="result-desc">Conversão de visitante em lead no teste A/B controlado, ante a versão antiga, confirmando a direção no campo.</p>
+        </article>
+        <article class="result-card reveal" data-reveal-delay="160">
+          <span class="result-mark" aria-hidden="true"></span>
+          <h3 class="result-title">~7,3 mil páginas no ar</h3>
+          <p class="result-desc">Publicadas em duas ondas com tech. O style guide e os componentes que criei cortaram um dia na produção de cada nova página.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AS PÁGINAS ============ -->
+  <section class="section proj-section" id="paginas">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">AS PÁGINAS</span>
+        <h2 class="section-title">PLP e PDP no ar.</h2>
+      </div>
+
+      <figure class="ds-hero reveal" style="margin-top:48px">
+        <img src="assets/financiamento-estudantil/plp-completa.jpg" width="1600" height="3028" loading="lazy" alt="Página de listagem (PLP) completa recriada">
+        <figcaption class="ds-caption">Página de listagem recriada</figcaption>
+      </figure>
+
+      <figure class="ds-hero reveal" style="margin-top:48px">
+        <img src="assets/financiamento-estudantil/pdp-completa.jpg" width="1600" height="5676" loading="lazy" alt="Página de detalhe (PDP) completa recriada">
+        <figcaption class="ds-caption">Página de detalhe recriada</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ APRENDIZADOS E LIMITAÇÕES ============ -->
+  <section class="section proj-section" id="aprendizados">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">APRENDIZADOS</span>
+        <h2 class="section-title">O que eu levo para qualquer próximo projeto.</h2>
+      </div>
+
+      <div class="task-grid">
+        <article class="task-card reveal">
+          <span class="task-num">01</span>
+          <h3 class="task-title">Sistema vence tela</h3>
+          <p class="task-desc">O style guide e os componentes não entregaram só a PLP e a PDP, baratearam todas as páginas seguintes. Pensar em sistema é o que escala design.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="60">
+          <span class="task-num">02</span>
+          <h3 class="task-title">Clareza é conversão</h3>
+          <p class="task-desc">O maior ganho não veio de um truque, e sim de explicar bem o produto, a ponto de o usuário permanecer mesmo sem simular. Conteúdo e proposta de valor são trabalho de design.</p>
+        </article>
+        <article class="task-card reveal" data-reveal-delay="120">
+          <span class="task-num">03</span>
+          <h3 class="task-title">O resultado mora na interseção</h3>
+          <p class="task-desc">O abandono só caiu porque negócio, UX e tech decidiram juntos. Como único designer, meu papel foi costurar SEO, copy, arquitetura e tecnologia, não apenas desenhar telas.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer proj-footer">
+    <div class="footer-shell">
+      <div class="footer-top footer-row">
+        <div class="footer-brand">
+          <p class="footer-name">Cassio Bazana</p>
+          <p class="footer-role">Product Designer</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-cta-link" href="index.html">Ver todos os trabalhos</a>
+          <a class="btn btn-accent btn-sm" href="mailto:cbazana@gmail.com">Entre em contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom footer-row">
+        <p>© 2026&nbsp; Cassio Bazana</p>
+        <p>Powered by Cassio Bazana</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem">
+      <span aria-hidden="true">×</span>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

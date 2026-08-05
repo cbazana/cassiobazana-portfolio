@@ -303,7 +303,114 @@
     "Tela · simulação de frete": "Screen · freight simulation",
     "Tela · agendamento e ordem": "Screen · scheduling and order",
     "Tela · confirmação e fila": "Screen · confirmation and queue",
-    "em breve": "coming soon"
+    "em breve": "coming soon",
+
+    // ===== Case Financiamento Estudantil (PLP + PDP) =====
+    "PLATAFORMA WEB · PRAVALER": "WEB PLATFORM · PRAVALER",
+    "Uma jornada de escolha única": "A single-choice journey",
+    "Recriei a PLP e a PDP da Pravaler para o usuário chegar à proposta com a escolha que já havia feito, sem repetir etapas entre squads. O abandono pela causa principal caiu de 13% para 4%.": "I rebuilt Pravaler's PLP and PDP so the user could reach the proposal with the choice already made, without repeating steps across squads. Abandonment from the main cause dropped from 13% to 4%.",
+    "Product Designer Especialista": "Specialist Product Designer",
+    "Squad de descoberta": "Discovery squad",
+    "Jornada de descoberta": "Discovery journey",
+
+    // O Desafio
+    "O usuário escolhia o curso, começava a contratação e tinha que escolher tudo de novo.": "The user chose the course, started the application, and had to choose everything again.",
+    "A Pravaler é uma fintech de financiamento estudantil, crédito para o aluno pagar a faculdade. A descoberta de cursos vivia numa página legado: lenta, com problemas de acessibilidade e de heurística, e sem comunicar a proposta de valor da marca para quem chegava. E quem chega ali é um público valioso, tráfego incremental e qualificado, que converte bem, mas que na maioria ainda não conhece a marca.": "Pravaler is a student financing fintech, credit for students to pay for college. Course discovery lived on a legacy page: slow, with accessibility and heuristic issues, and without communicating the brand's value proposition to newcomers. And whoever arrives there is a valuable audience, incremental and qualified traffic that converts well but mostly still doesn't know the brand.",
+    "O problema real não era ter passos demais. A decisão de financiar estava quebrada entre duas squads: o usuário escolhia curso e SKU na descoberta e, ao entrar no fluxo de contratação, precisava escolher de novo. A repetição gerava insegurança num processo longo, e ele desistia antes de ver a proposta.": "The real problem wasn't having too many steps. The decision to finance was broken across two squads: the user chose course and SKU during discovery and, when entering the application flow, had to choose again. The repetition created insecurity in a long process, and the user gave up before seeing the proposal.",
+    "A dificuldade de compreender o financiamento amplificava tudo, respondia por 13% do abandono e tirava a motivação justo onde o esforço era maior. Entrei como único designer do projeto, atuando de ponta a ponta, da descoberta à validação.": "The difficulty in understanding the financing amplified everything, it accounted for 13% of abandonment and drained motivation exactly where effort was highest. I joined as the project's sole designer, working end to end, from discovery to validation.",
+
+    // A Descoberta
+    "A DESCOBERTA": "DISCOVERY",
+    "Dois instrumentos independentes, uma mesma dor.": "Two independent instruments, the same pain.",
+    "Cruzei duas fontes que não conversam entre si: pesquisas de abandono (dropout no Hotjar) e tickets de atendimento do CS. Quando as duas apontam para o mesmo lugar, a chance de estar perseguindo um problema real, e não uma percepção, sobe muito. Sintetizei tudo numa matriz CSD (Certezas, Suposições, Dúvidas), construída com PM, tech e marketing, para separar dado de achismo antes de propor qualquer solução.": "I cross-referenced two sources that don't talk to each other: abandonment research (dropout in Hotjar) and CS support tickets. When both point to the same place, the odds of chasing a real problem, and not a perception, go way up. I synthesized everything in a CSD matrix (Certainties, Assumptions, Doubts), built with PM, tech and marketing, to separate data from guesswork before proposing any solution.",
+    "Compreender o financiamento era a maior dificuldade": "Understanding the financing was the biggest difficulty",
+    "O usuário não entendia o que estava contratando nem o benefício. Sozinha, essa dor respondia por 13% do abandono.": "The user didn't understand what they were signing up for or the benefit. On its own, this pain accounted for 13% of abandonment.",
+    "O valor aparecia tarde demais": "The value showed up too late",
+    "Os valores só ficavam claros na simulação da proposta, e apenas cerca de 8% dos visitantes chegavam até lá. A maioria desistia antes de ver o que a convenceria.": "Prices only became clear in the proposal simulation, and only about 8% of visitors got there. Most gave up before seeing what would convince them.",
+    "A escolha era feita duas vezes": "The choice was made twice",
+    "Havia dois caminhos para escolher curso e SKU na descoberta e, ao entrar no fluxo de contratação de outra squad, o usuário refazia tudo. Repetição virava insegurança, e insegurança virava desistência.": "There were two paths to choose course and SKU during discovery and, when entering another squad's application flow, the user redid everything. Repetition turned into insecurity, and insecurity turned into drop-off.",
+    "Síntese da descoberta em Certezas, Suposições e Dúvidas": "Discovery synthesized into Certainties, Assumptions and Doubts",
+    "Matriz CSD construída com a squad": "CSD matrix built with the squad",
+
+    // Estratégia e Priorização
+    "ESTRATÉGIA E PRIORIZAÇÃO": "STRATEGY & PRIORITIZATION",
+    "Decidi os caminhos antes de desenhar as telas.": "I decided the paths before designing the screens.",
+    "Liguei o resultado que eu queria mover, reduzir o abandono até a proposta, às oportunidades e às soluções candidatas. Assim eu discutia caminhos, não pixels.": "I connected the outcome I wanted to move, reducing abandonment on the way to the proposal, to the opportunities and candidate solutions. That way I discussed paths, not pixels.",
+    "Benchmark facilitado por mim": "Benchmark facilitated by me",
+    "Conduzi uma dinâmica com a squad e stakeholders sobre quatro referências, dois concorrentes diretos e dois players de fora do setor. O grupo votava o que usar e o que descartar. Saí com o escopo do protótipo mapeado e a squad comprada na decisão.": "I ran a session with the squad and stakeholders on four references, two direct competitors and two players from outside the sector. The group voted on what to use and what to drop. I left with the prototype scope mapped and the squad bought into the decision.",
+    "Esforço x impacto e parking lot": "Effort vs impact and parking lot",
+    "Medi esforço contra impacto junto com tech e cortei o que não fazia sentido na primeira entrega. Nada foi jogado fora: o descartado foi para um parking lot, o que deu previsibilidade de escopo.": "I measured effort against impact together with tech and cut what didn't make sense for the first release. Nothing was thrown away: what was dropped went to a parking lot, which gave scope predictability.",
+    "Métricas definidas antes de desenhar": "Metrics defined before designing",
+    "Fechei como mediria sucesso antes da primeira tela: o abandono como estrela-guia e um teste A/B controlado como prova. Isso evita comemorar qualquer número no fim.": "I set how I'd measure success before the first screen: abandonment as the north star and a controlled A/B test as proof. That avoids celebrating any number at the end.",
+    "Das dores às apostas priorizadas": "From pains to prioritized bets",
+    "Opportunity Solution Tree e matriz de esforço x impacto": "Opportunity Solution Tree and effort vs impact matrix",
+    "Opportunity Solution Tree: do resultado às soluções candidatas": "Opportunity Solution Tree: from outcome to candidate solutions",
+    "Benchmark de funcionalidades avaliado com a squad": "Feature benchmark assessed with the squad",
+    "Priorização por esforço e impacto, com parking lot": "Prioritization by effort and impact, with a parking lot",
+
+    // A Solução
+    "Uma escolha, carregada até a proposta.": "One choice, carried all the way to the proposal.",
+    "As decisões da descoberta viraram três movimentos.": "The discovery decisions became three moves.",
+    "A escolha uma vez só": "The choice, only once",
+    "Recriei a PLP, que antes não tinha cara de página de listagem, e a PDP para que a escolha de curso e SKU fosse feita uma única vez e viajasse com o usuário para dentro do fluxo de contratação. Ele deixa de reescolher e entra na contratação com o curso já definido.": "I rebuilt the PLP, which didn't look like a listing page before, and the PDP so the course and SKU choice was made only once and traveled with the user into the application flow. They stop rechoosing and enter the application with the course already set.",
+    "Valor antecipado": "Value brought forward",
+    "Em vez de esconder o essencial até a simulação, trouxe a proposta de valor do financiamento e as informações de decisão, modalidade, turno, grade curricular, empregabilidade e selo oficial de avaliação, para a primeira dobra e ao longo da rolagem, com CTA presente em vários pontos. Dar motivo para seguir antes de pedir esforço.": "Instead of hiding the essentials until the simulation, I brought the financing value proposition and the decision information, format, shift, curriculum, employability and official rating seal, to the first fold and along the scroll, with a CTA present at several points. Give a reason to continue before asking for effort.",
+    "Compliance na exibição de valores": "Compliance in showing prices",
+    "03 · Compliance na exibição de valores": "03 · Compliance in showing prices",
+    "Precisão de informação financeira não se negocia. Compliance acima de conversão.": "Accuracy of financial information is non-negotiable. Compliance above conversion.",
+    "Onde havia divergência entre o valor da instituição e o do produto, mostrar um número impreciso era risco de compliance. Optei por não exibir nesses casos e conduzir o usuário à simulação para o número correto.": "Where the institution's price and the product's price diverged, showing an inaccurate number was a compliance risk. I chose not to display it in those cases and to lead the user to the simulation for the correct number.",
+    "Onde havia divergência entre o valor da instituição e o do produto, mostrar um número impreciso era risco de compliance. Optei por não exibir nesses casos e conduzir o usuário à simulação para o número correto. Precisão de informação financeira não se negocia, compliance acima de conversão.": "Where the institution's price and the product's price diverged, showing an inaccurate number was a compliance risk. I chose not to display it in those cases and to lead the user to the simulation for the correct number. Accuracy of financial information is non-negotiable, compliance above conversion.",
+    "Do conceito ao protótipo": "From concept to prototype",
+    "Levei a estrutura direto ao protótipo, já alinhada com copy, SEO e growth e validada com tech antes de subir a fidelidade, reaproveitando componentes que já funcionavam em outras páginas. Menos ida e volta, viabilidade garantida cedo, e o pixel a serviço da decisão de arquitetura.": "I took the structure straight to the prototype, already aligned with copy, SEO and growth and validated with tech before raising fidelity, reusing components that already worked on other pages. Less back and forth, viability ensured early, and the pixel serving the architecture decision.",
+    "PLP e PDP com a escolha única": "PLP and PDP with the single choice",
+    "Proposta de valor na primeira dobra": "Value proposition in the first fold",
+    "Exibição de valores sob compliance": "Showing prices under compliance",
+
+    // Validação
+    "VALIDAÇÃO": "VALIDATION",
+    "Testei antes de comemorar.": "I tested before celebrating.",
+    "Teste A/B controlado no Amplitude": "Controlled A/B test in Amplitude",
+    "Comparei a página nova contra a antiga nos dois cursos mais procurados na base, para concentrar o teste onde havia mais demanda e ler o resultado em dez dias. Métrica primária, conversão de visitante em lead: a variante venceu nos dois, com 32% e 29% de aumento.": "I compared the new page against the old one on the two most searched courses in the base, to focus the test where demand was highest and read the result in ten days. Primary metric, visitor-to-lead conversion: the variant won on both, with 32% and 29% gains.",
+    "O que eu deliberadamente não testei": "What I deliberately didn't test",
+    "Deixei a versão com valores de fora do A/B. A página já carregava mudanças demais e incluir os valores contaminaria a leitura. Isolar a variável é o que separa um teste de uma torcida.": "I left the version with prices out of the A/B. The page already carried too many changes and including prices would contaminate the reading. Isolating the variable is what separates a test from wishful thinking.",
+    "Shadowing digital no Clarity": "Digital shadowing in Clarity",
+    "Analisei gravações de tela e mapas de calor para achar fricções finas, como o checklist difícil no mobile e a posição das perguntas frequentes. Nada virou correção às pressas: transformei em um backlog priorizado de melhoria contínua.": "I analyzed session recordings and heatmaps to find fine frictions, like the checklist being hard on mobile and the position of the FAQ. Nothing became a rushed fix: I turned it into a prioritized backlog of continuous improvement.",
+
+    // Resultados
+    "Menos desistência, valor mais cedo.": "Less drop-off, value sooner.",
+    "13% → 4% de abandono": "13% → 4% abandonment",
+    "A causa principal do abandono, medida por dropout no Hotjar e tickets de CS, três meses após o lançamento e com a mesma base.": "The main cause of abandonment, measured by dropout in Hotjar and CS tickets, three months after launch and on the same base.",
+    "+32% e +29% de conversão": "+32% and +29% conversion",
+    "Conversão de visitante em lead no teste A/B controlado, ante a versão antiga, confirmando a direção no campo.": "Visitor-to-lead conversion in the controlled A/B test, against the old version, confirming the direction in the field.",
+    "~7,3 mil páginas no ar": "~7.3k pages live",
+    "Publicadas em duas ondas com tech. O style guide e os componentes que criei cortaram um dia na produção de cada nova página.": "Published in two waves with tech. The style guide and components I created cut one day from producing each new page.",
+
+    // As Páginas
+    "AS PÁGINAS": "THE PAGES",
+    "PLP e PDP no ar.": "PLP and PDP live.",
+    "PLP completa": "Full PLP",
+    "Página de listagem recriada": "Listing page rebuilt",
+    "PDP completa": "Full PDP",
+    "Página de detalhe recriada": "Detail page rebuilt",
+
+    // Aprendizados
+    "APRENDIZADOS": "LEARNINGS",
+    "O que eu levo para qualquer próximo projeto.": "What I take to any next project.",
+    "Sistema vence tela": "System beats screen",
+    "O style guide e os componentes não entregaram só a PLP e a PDP, baratearam todas as páginas seguintes. Pensar em sistema é o que escala design.": "The style guide and components didn't just deliver the PLP and the PDP, they made every following page cheaper. Thinking in systems is what scales design.",
+    "Clareza é conversão": "Clarity is conversion",
+    "O maior ganho não veio de um truque, e sim de explicar bem o produto, a ponto de o usuário permanecer mesmo sem simular. Conteúdo e proposta de valor são trabalho de design.": "The biggest gain didn't come from a trick, but from explaining the product well, to the point the user stayed even without simulating. Content and value proposition are design work.",
+    "O resultado mora na interseção": "The result lives at the intersection",
+    "O abandono só caiu porque negócio, UX e tech decidiram juntos. Como único designer, meu papel foi costurar SEO, copy, arquitetura e tecnologia, não apenas desenhar telas.": "Abandonment only dropped because business, UX and tech decided together. As the sole designer, my role was to stitch SEO, copy, architecture and technology, not just design screens.",
+
+    // Placeholders
+    "Telas finais da PLP e da PDP": "Final PLP and PDP screens",
+    "imagem em breve": "image coming soon",
+    "tela em breve": "screen coming soon",
+
+    // Card na home
+    "Uma jornada de escolha única para uma fintech de financiamento estudantil": "A single-choice journey for a student financing fintech",
+    "PLP e PDP que levam o usuário à contratação com o curso já escolhido, sem refazer etapas entre squads, e reduziram o abandono pela causa principal de 13% para 4%.": "A PLP and a PDP that take the user into the application with the course already chosen, without redoing steps across squads, cutting abandonment from the main cause from 13% to 4%."
   };
 
   // Indexa os nós de texto traduzíveis uma única vez
