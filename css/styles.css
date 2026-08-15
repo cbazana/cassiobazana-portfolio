@@ -806,6 +806,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   flex-wrap: wrap;
 }
 
+/* ---------- Habilidades ---------- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.skills-chips { gap: 8px; }
+
 /* ---------- Depoimentos ---------- */
 
 .testimonials {
@@ -983,6 +993,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .case-media { width: 100%; max-width: none; border-radius: var(--radius) var(--radius) 0 0; }
 
   .testimonials { grid-template-columns: 1fr; }
+
+  .skills-grid { grid-template-columns: 1fr; }
 
   .bento-stats { flex-direction: column; }
 
