@@ -438,10 +438,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   align-items: center;
   gap: 16px;
   padding-right: 16px;
-  font-size: 14px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
   color: #fff;
   white-space: nowrap;
 }
+
+.marquee-sep { color: inherit; }
 
 @keyframes marquee {
   from { transform: translateX(0); }
