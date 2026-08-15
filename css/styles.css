@@ -815,10 +815,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   gap: 32px;
 }
 
-.skills-chips { gap: 8px; }
+.skills-chips { gap: 6px; }
 
 /* ---------- Depoimentos ---------- */
 
