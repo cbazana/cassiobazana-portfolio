@@ -117,7 +117,8 @@
     "Vamos Trabalhar Juntos": "Let's Work Together",
     // Hero
     "PRODUCT DESIGNER SENIOR · UX/UI": "SENIOR PRODUCT DESIGNER · UX/UI",
-    "Produtos digitais que fazem marcas crescerem.": "Digital products that make brands grow.",
+    "Produtos digitais que fazem": "Digital products that make",
+    "marcas crescerem.": "brands grow.",
     "Ajudo empresas de médio e grande porte a transformar complexidade em produtos digitais escaláveis e orientados a resultado.": "I help mid-sized and large companies turn complexity into scalable, results-driven digital products.",
     "Entre em contato": "Get in touch",
     // Cases
