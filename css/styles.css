@@ -401,7 +401,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: clamp(40px, 5.4vw, 64px);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .hero-lead {
