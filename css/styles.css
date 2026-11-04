@@ -1100,7 +1100,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .proj-lead {
   margin-top: 28px;
   margin-inline: auto;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.6;
   max-width: 660px;
   color: var(--white-70);
@@ -1132,7 +1132,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .meta-item:last-child { border-right: 0; padding-right: 0; margin-right: 0; }
 
 .meta-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1142,7 +1142,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .meta-value {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: -0.015em;
   color: var(--ink);
 }
@@ -1237,7 +1237,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .task-num {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   color: var(--accent);
 }
@@ -1245,12 +1245,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .task-title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 21px;
+  font-size: 20px;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
 
-.task-desc { font-size: 15px; line-height: 1.6; color: var(--ink-70); }
+.task-desc { font-size: 16px; line-height: 1.6; color: var(--ink-70); }
 
 /* ---------- Módulos: blocos alternados ---------- */
 
@@ -1328,7 +1328,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .feature-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   color: var(--accent);
 }
@@ -1342,7 +1342,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: #fff;
 }
 
-.feature-desc { font-size: 17px; line-height: 1.65; color: var(--white-70); }
+.feature-desc { font-size: 18px; line-height: 1.65; color: var(--white-70); }
 
 /* ---------- Design system ---------- */
 
@@ -1422,7 +1422,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--ink);
 }
 
-.result-desc { font-size: 15px; line-height: 1.6; color: var(--ink-70); }
+.result-desc { font-size: 16px; line-height: 1.6; color: var(--ink-70); }
 
 /* ---------- Lightbox das telas ---------- */
 
@@ -1532,3 +1532,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .meta-item { border-right: 0; padding-right: 0; margin-right: 0; align-items: center; }
   .footer-links { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
+
+/* ===== pagina-apta: touch (hover preso), quebra de linha, [hidden] ===== */
+@media (hover: none) {
+  .btn:hover,.btn-light:hover,.btn-accent:hover,.icon-tile:hover,.icon-plain:hover,.linkedin-link:hover,
+  .case-card:hover,.work-card:hover,.bento-card:hover,.testimonial-card:hover,.result-card:hover,
+  .task-card:hover,.proj-back:hover,.lightbox-close:hover{transform:none;box-shadow:none}
+  .brand:hover .brand-avatar,.case-card:hover .case-media img,.work-card:hover .work-media>img,
+  .work-card:hover .work-media>img.ourocard-genio,.lang-switch:hover .lang-chevron,
+  .feature-row:hover .shot img,.proj-back:hover .proj-back-arrow,.ds-hero:hover img{transform:none}
+  .marquee:hover .marquee-track{animation-play-state:running}
+}
+h1,h2,h3,.section-title,.hero-title,.proj-title,.proj-about-title,.feature-title,.case-title,.work-title,.result-title{text-wrap:balance}
+p,.hero-lead,.proj-about-text,.feature-desc,.testimonial-text,.case-desc,.work-desc,.result-desc,.task-desc,.about-text{text-wrap:pretty}
+[hidden]{display:none!important}
