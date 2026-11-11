@@ -482,11 +482,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- Cases ---------- */
 
-.case-list { display: flex; flex-direction: column; gap: 32px; }
+.case-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
 
 .case-card {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -500,23 +500,52 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .case-media {
-  width: 40%;
-  min-width: 320px;
-  max-width: 443px;
-  height: 251px;
-  flex-shrink: 0;
-  border-radius: var(--radius) 0 0 var(--radius);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
+  transform: translateZ(0);
+}
+
+.case-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent);
+  transition: opacity 0.16s ease-out;
 }
 
 .case-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
 }
 
-.case-card:hover .case-media img { transform: scale(1.04); }
+.case-card:hover .case-media img { transform: scale(1.04); filter: blur(1.5px); }
+.case-card:hover .case-media::after { opacity: 1; }
+
+.case-category {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: inline-block;
+  background: rgba(18, 18, 21, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(244, 244, 242, 0.14);
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
 /* placeholder "em breve" para os cases ainda sem imagem final */
 .case-ph {
@@ -994,6 +1023,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .section { padding-top: 100px; }
   .section-head { margin-bottom: 56px; gap: 16px; }
 
+  .case-list { grid-template-columns: 1fr; }
   .case-card { flex-direction: column; gap: 0; }
   .case-media { width: 100%; max-width: none; border-radius: var(--radius) var(--radius) 0 0; }
 
